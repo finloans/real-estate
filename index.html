@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinLoans Real Estate Calculator for Borrowers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('finloans-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 4px solid #2d87f0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo img {
+            width: 150px; /* Resize the logo to be more compact */
+            height: auto;
+        }
+        h2 {
+            text-align: center;
+            color: #2d87f0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #2d87f0;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #1b5dbf;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e9f5ff;
+            border-radius: 10px;
+        }
+        .result h3 {
+            margin: 0;
+            color: #2d87f0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .logo img {
+                width: 120px; /* Adjust logo size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="finloans-logo.png" alt="FinLoans Logo"> <!-- Ensure the logo is smaller and fits on desktop/mobile -->
+        </div>
+        <h2>FinLoans Real Estate Calculator for Borrowers</h2>
+
+        <div class="form-group">
+            <label for="propertyValue">Property Value (₹)</label>
+            <input type="number" id="propertyValue" placeholder="Enter the property value">
+        </div>
+
+        <div class="form-group">
+            <label for="loanEligibility">Monthly Income (₹)</label>
+            <input type="number" id="loanEligibility" placeholder="Enter your monthly income">
+        </div>
+
+        <div class="form-group">
+            <label for="existingEmi">Existing EMI Obligations (₹)</label>
+            <input type="number" id="existingEmi" placeholder="Enter your existing EMIs" value="0">
+        </div>
+
+        <div class="form-group">
+            <label for="loanAmount">Desired Loan Amount (₹)</label>
+            <input type="number" id="loanAmount" placeholder="Enter the loan amount">
+        </div>
+
+        <div class="form-group">
+            <label for="interestRate">Interest Rate (%)</label>
+            <input type="number" step="0.01" id="interestRate" placeholder="Enter the interest rate">
+        </div>
+
+        <div class="form-group">
+            <label for="loanTenure">Loan Tenure (Years)</label>
+            <input type="number" id="loanTenure" placeholder="Enter loan tenure in years">
+        </div>
+
+        <button onclick="calculateRealEstate()">Calculate</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="finloans-real-estate-calculator.js"></script>
+</body>
+</html>
